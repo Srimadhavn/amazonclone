@@ -1,0 +1,38 @@
+.home__bannerContainer {
+    position: relative;
+    width: 100%;
+    height: 600px; 
+    overflow: hidden;
+  }
+  
+  .home__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .home__prev, .home__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border: none;
+    z-index: 10;
+  }
+  
+  .home__prev:hover, .home__next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .home__prev {
+    left: 10px;
+  }
+  
+  .home__next {
+    right: 10px;
+  }
+  

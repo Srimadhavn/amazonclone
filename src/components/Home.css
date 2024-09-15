@@ -1,0 +1,132 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1500px;
+    background-color: rgb(234, 237, 237);
+}
+
+.home__bannerContainer {
+    position: relative;
+    width: 100%;
+}
+
+.home__image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    margin: 0;
+}
+
+.home__prev, .home__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 10;
+    border: none;
+}
+
+.home__prev:hover, .home__next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.home__prev {
+    left: 10px;
+}
+
+.home__next {
+    right: 10px;
+}
+
+.home__twoSectionsOverlay {
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.home__twoSectionsContainer, .home__twoTopicsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.home__twoSectionsItem {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.home__twoSectionsItem:hover {
+    transform: translateY(-5px);
+}
+
+.home__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.home__row > div {
+    flex-basis: 23%;
+    margin: 10px 0;
+    box-sizing: border-box;
+    transition: transform 0.2s ease;
+}
+
+.home__row > div:hover {
+    transform: translateY(-5px);
+}
+
+.home__twoTopicsRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+    margin-top: 20px;
+}
+
+.home__twoTopicsItem {
+    flex: 1; 
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .home__prev, .home__next {
+        font-size: 20px;
+    }
+
+    .home__image {
+        height: 300px;
+    }
+
+    .home__row > div {
+        flex-basis: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .home__prev, .home__next {
+        font-size: 18px;
+    }
+
+    .home__image {
+        height: 250px;
+    }
+
+    .home__row > div {
+        flex-basis: 100%; 
+    }
+}
